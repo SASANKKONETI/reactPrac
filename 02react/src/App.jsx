@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 function App() {
+  console.log("times");
   const [length, setLength] = useState(8);
   const [hasNumber, setNumber] = useState(false);
   const [hasChar, setChar] = useState(false);
@@ -30,7 +31,7 @@ function App() {
     return password;
   }
 
-  var a = generatePassword(length);
+  const a = generatePassword(length);
 
   return (
     <>
@@ -53,7 +54,6 @@ function App() {
         type="checkbox"
         id="number"
         name="number"
-        checked={hasNumber}
         onChange={() => {
           setNumber(!hasNumber);
         }}
@@ -63,7 +63,6 @@ function App() {
         type="checkbox"
         id="character"
         name="character"
-        checked={hasChar}
         onChange={() => {
           setChar(!hasChar);
         }}
